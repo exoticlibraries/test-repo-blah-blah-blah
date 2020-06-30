@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI with Cesting
+name: CI with Cester
 
 on:
   push:
@@ -13,12 +11,22 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-18.04, macos-10.15, ubuntu-latest, windows-2016, windows-2019]
-        platform: [x32, x64, arm, arm64]
-        compiler: [gnu, clang, cl]
+        os: [ubuntu-latest]
+        platform: [x64]
+        compiler: [gnu]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Download cester
+        run: wget -O cester.h https://raw.githubusercontent.com/exoticlibraries/libcester/master/include/exotic/cester.h -q
+        
+      - name: Run tests
+        run: |
+          gcc test/test_no_assert.c -I. -o out; ./out
+          gcc test/test_no_main.c -I. -o out; ./out
+          gcc test/test_no_time.c -I. -o out; ./out
         
       - name: Run a one-line script
         run: echo Hello, world!
