@@ -19,8 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+      #- name: Download cester
+      #  run: wget -O cester.h https://raw.githubusercontent.com/exoticlibraries/libcester/master/include/exotic/cester.h -q
+        
       - name: Download cester
-        run: wget -O cester.h https://raw.githubusercontent.com/exoticlibraries/libcester/master/include/exotic/cester.h -q
+        run: bash <(curl -s https://exoticlibraries.github.io/libcester/cester.sh)
         
       - name: Run tests
         run: |
