@@ -1,4 +1,4 @@
-name: CI with Cester
+name: CI with C/C++ Exotic Action
 
 on:
   push:
@@ -22,8 +22,8 @@ jobs:
       - name: Download cester
         run: | 
           wget -O cester.h https://raw.githubusercontent.com/exoticlibraries/libcester/master/include/exotic/cester.h
-          mkdir -p /usr/include/exotic/
-          mv cester.h /usr/include/exotic/
+          sudo mkdir -p /usr/include/exotic/
+          sudo mv cester.h /usr/include/exotic/
           echo Done installing cester
           
       - name: Run tests
