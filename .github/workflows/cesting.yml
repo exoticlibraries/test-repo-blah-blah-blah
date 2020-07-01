@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Setup Exotic Libraries and Run Regression Test1
-        uses: exoticlibraries/exotic-action@master
+        uses: exoticlibraries/exotic-action@761943b959235bc562f12c58df01df5a55aac35b
         
       - name: Download cester
         run: | 
