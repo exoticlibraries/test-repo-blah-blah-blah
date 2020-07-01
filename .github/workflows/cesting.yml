@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Download cester
+      - name: Setup Exotic Libraries and Run Regression Test
         uses: exoticlibraries/exotic-action@master
         
       - name: Download cester
