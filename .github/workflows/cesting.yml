@@ -21,8 +21,8 @@ jobs:
         
       - name: Setup Exotic Libraries and Run Regression Test1
         uses: exoticlibraries/exotic-action@master
-        with: |
-          download-exotic-libraries: 'false'
+        with:
+          download-exotic-libraries: false
           
       - name: Run tests
         run: |
