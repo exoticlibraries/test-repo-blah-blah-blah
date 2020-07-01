@@ -20,6 +20,9 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Download cester
+        uses: exoticlibraries/exotic-action@master
+        
+      - name: Download cester
         run: | 
           wget -O cester.h https://raw.githubusercontent.com/exoticlibraries/libcester/master/include/exotic/cester.h
           sudo mkdir -p /usr/include/exotic/
