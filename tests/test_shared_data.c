@@ -4,9 +4,9 @@
 
 #include <exotic/cester.h>
 
-//CESTER_BEFORE_ALL(test_instance,
-//    test_instance->arg = (void*) "Hello World";
-//)
+CESTER_BEFORE_ALL(test_instance,
+    test_instance->arg = (void*) "Hello World";
+)
 
 //CESTER_BEFORE_EACH(test_instance, name, index,
 //    printf("Isolated Str %s\n", (char*)test_instance->arg);
@@ -21,7 +21,7 @@ CESTER_TEST(check_number_equals, test_instance,
 )
     
 CESTER_TEST(test_one, inst,
-    cester_assert_equal(NULL, ((void*)0));    
+    //cester_assert_equal(NULL, ((void*)0));    
 )
 
 CESTER_OPTIONS(
