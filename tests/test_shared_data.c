@@ -19,6 +19,10 @@ CESTER_TEST(check_number_equals, test_instance,
     cester_assert_equal(test_instance->arg, test_instance->arg);
     cester_assert_not_equal(NULL, test_instance->arg);
 )
+    
+CESTER_TEST(test_one, inst,
+    cester_assert_equal(NULL, ((void*)0));    
+)
 
 CESTER_OPTIONS(
     CESTER_VERBOSE();
