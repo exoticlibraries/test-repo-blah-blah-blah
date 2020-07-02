@@ -16,8 +16,8 @@ jobs:
         compiler: [gnu]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      #- name: Checkout
+      #  uses: actions/checkout@v2
         
       - name: Setup Exotic Libraries and Run Regression Test1
         uses: exoticlibraries/exotic-action@master
