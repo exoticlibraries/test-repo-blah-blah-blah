@@ -19,21 +19,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Setup Exotic Libraries and Run Regression Test1
+      - name: Setup Exotic Libraries and Run Regression Test
         uses: exoticlibraries/exotic-action@master
-        with:
-          download-exotic-libraries: true
-          
-      - name: Run tests
-        run: |
-          gcc test/test_no_assert.c -I. -o out; ./out
-          gcc test/test_no_main.c -I. -o out; ./out
-          gcc test/test_no_time.c -I. -o out; ./out
-        
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
