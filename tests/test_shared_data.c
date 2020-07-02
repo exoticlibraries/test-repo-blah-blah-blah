@@ -21,7 +21,9 @@ CESTER_TEST(check_number_equals, test_instance,
 )
 
 CESTER_TEST(validate_shared_arg, test_instance,
-    cester_assert_true(cester_string_equals((char*)test_instance->arg, "Hello World"));
+    printf("2 Isolated Str %s\n", (char*)test_instance->arg);
+    printf("1 Isolated %d\n", superTestInstance.isolate_tests);
+    //cester_assert_true(cester_string_equals((char*)test_instance->arg, "Hello World"));
     //cester_assert_false(cester_string_equals((char*)test_instance->arg, "World"));
     //cester_assert_false(cester_string_equals((char*)test_instance->arg, "Hello"));
 )
