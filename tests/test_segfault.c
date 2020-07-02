@@ -1,4 +1,4 @@
-/*!gcc -ansi -pedantic-errors {0} -I. -I../include/ -o out; ./out */
+/*!gcc -DHAVE_CONFIG_H -I. -I.. -DUTC_OFFSET=+0000  -g -O2 -Wall -MD -Wpointer-arith -Wshadow -Wwrite-strings -Wcast-align -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wmissing-noreturn -Wstrict-null-sentinel -Woverloaded-virtual -Wsign-promo -Wno-deprecated-declarations -Wno-unknown-warning-option -funit-at-a-time -Weffc++ {0} -I. -I../include/ -o out; ./out */
 
 #include <exotic/cester.h>
 
@@ -25,7 +25,12 @@ CESTER_TEST(segfault_test_null_ptr, test_instance,
 )
 
 CESTER_TEST(no_segfault, test_instance,
-    
+    int *p = NULL;
+    AStruct* arg_value = (AStruct*) malloc(sizeof(AStruct*));
+    arg_value->index = 20;
+    cester_assert_equal(arg_value, NULL);
+    free(arg_value);
+    *p=0xdead;
 )
 
 CESTER_TEST(this_should_notbe_affected, test_instance,
