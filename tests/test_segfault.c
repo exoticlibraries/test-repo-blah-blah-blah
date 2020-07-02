@@ -17,7 +17,11 @@ CESTER_TEST(definitely_crahses, test_instance,
 )
 
 CESTER_TEST(segfault_test_null_ptr, test_instance,
-    
+    int *p = NULL;
+    AStruct* arg_value ;
+    cester_assert_equal(arg_value->value, NULL);
+    cester_assert_equal(arg_value->value[21], '~');
+    *p=0xdead;
 )
 
 CESTER_TEST(no_segfault, test_instance,
