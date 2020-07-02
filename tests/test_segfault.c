@@ -12,8 +12,8 @@ typedef struct a_struct {
 )
 
 CESTER_TEST(definitely_crahses, test_instance,
-    //int *p = NULL;
-    //*p=0xdead;
+    int *p = NULL;
+    *p=0xdead;
 )
 
 CESTER_TEST(segfault_test_null_ptr, test_instance,
