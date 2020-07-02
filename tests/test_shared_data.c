@@ -14,10 +14,10 @@ CESTER_BEFORE_ALL(test_instance,
 //)
 
 CESTER_TEST(check_number_equals, test_instance,
-    //cester_assert_true(cester_string_equals((char*)test_instance->arg, "Hello World"));
-    //cester_assert_not_null(test_instance->arg);
-    //cester_assert_equal(test_instance->arg, test_instance->arg);
-    //cester_assert_not_equal(NULL, test_instance->arg);
+    cester_assert_true(cester_string_equals((char*)test_instance->arg, "Hello World"));
+    cester_assert_not_null(test_instance->arg);
+    cester_assert_equal(test_instance->arg, test_instance->arg);
+    cester_assert_not_equal(NULL, test_instance->arg);
 )
     
 CESTER_TEST(test_one, inst,
