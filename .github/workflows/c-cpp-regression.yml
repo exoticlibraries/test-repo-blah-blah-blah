@@ -11,9 +11,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-20.04, ubuntu-latest, windows-latest]
-        platform: [x64, x86]
-        compiler: [gnu, clang]
+        os: [windows-latest]
+        platform: [x64]
+        compiler: [clang]
 
     steps:
       - name: Checkout
