@@ -21,8 +21,8 @@ jobs:
       - name: Print Folder
         run: |
           dir C:\msys64\
-          dir C:\msys64\clang32\
-          dir C:\msys64\mingw32\
+          dir C:\msys64\clang32\bin\
+          dir C:\msys64\mingw32\bin\
         
       #- name: Setup Exotic Libraries
       #  uses: exoticlibraries/exotic-action@master
