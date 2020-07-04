@@ -21,7 +21,8 @@ CESTER_TEST(check_number_equals, test_instance,
 )
     
 CESTER_TEST(test_one, inst,
-    //cester_assert_equal(NULL, ((void*)0));    
+    printf("This should come before\n");
+    cester_assert_equal(NULL, ((void*)0));    
 )
 
 CESTER_OPTIONS(
