@@ -19,15 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Print Folder
-        run: |
-          C:\msys64\mingw32\bin\gcc.exe -v
-          C:\msys64\mingw64\bin\gcc.exe -v
+      #- name: Print Folder
+      #  run: |
+      #    C:\msys64\mingw32\bin\gcc.exe -v
+      #    C:\msys64\mingw64\bin\gcc.exe -v
         
-      - name: Setup Exotic Libraries
-        uses: exoticlibraries/exotic-action@master
-        with:
-          run-cester-regression: false
+      #- name: Setup Exotic Libraries
+      #  uses: exoticlibraries/exotic-action@master
+      #  with:
+      #    run-cester-regression: false
         
       - name: Run Regression
         uses: exoticlibraries/exotic-action@master
