@@ -22,7 +22,7 @@ jobs:
       - name: Print Folder
         run: |
           C:\msys64\mingw32\bin\gcc.exe -v
-      #    C:\msys64\mingw64\bin\gcc.exe -v
+          SET PATH=%PATH%;C:\msys64\mingw64\bin && C:\msys64\mingw64\bin\gcc.exe -m64 -pedantic -I. test\test_no_assert.c -o test_no_assert.ex
         
       #- name: Setup Exotic Libraries
       #  uses: exoticlibraries/exotic-action@master
