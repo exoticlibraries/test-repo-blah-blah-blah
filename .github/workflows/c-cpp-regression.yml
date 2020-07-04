@@ -11,21 +11,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-20.04, ubuntu-latest, windows-latest]
         platform: [x86, x64]
-        compiler: [clang]
+        compiler: [gnu, clang]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: Print Folder
-        run: |
-          dir C:\msys64\
-          dir C:\msys64\clang32\bin\
-          dir C:\msys64\clang64\bin\
-          dir C:\msys64\mingw32\bin\
-          dir C:\msys64\mingw64\bin\
         
       - name: Setup Exotic Libraries
         uses: exoticlibraries/exotic-action@master
