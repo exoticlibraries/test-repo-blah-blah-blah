@@ -21,8 +21,8 @@ jobs:
         
       - name: Print Folder
         run: |
-          dir C:\msys64\mingw64\bin\
-          C:\msys64\mingw64\bin\gcc.exe
+          C:\msys64\mingw32\bin\gcc.exe -v
+          C:\msys64\mingw64\bin\gcc.exe -v
         
       - name: Setup Exotic Libraries
         uses: exoticlibraries/exotic-action@master
