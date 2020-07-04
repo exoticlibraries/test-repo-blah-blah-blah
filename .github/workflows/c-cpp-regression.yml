@@ -18,18 +18,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Print Folder
-        run: |
-          dir C:\msys64\
-          dir C:\msys64\clang32\bin\
-          dir C:\msys64\mingw32\bin\
         
-      #- name: Setup Exotic Libraries
-      #  uses: exoticlibraries/exotic-action@master
-      #  with:
-      #    run-cester-regression: false
+      - name: Setup Exotic Libraries
+        uses: exoticlibraries/exotic-action@master
+        with:
+          run-cester-regression: false
         
-      #- name: Run Regression
-      #  uses: exoticlibraries/exotic-action@master
-      #  with:
-      #    download-exotic-libraries: false
+      - name: Run Regression
+        uses: exoticlibraries/exotic-action@master
+        with:
+          download-exotic-libraries: false
