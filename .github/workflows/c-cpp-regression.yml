@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      #- name: Print Folder
+      - name: Print Folder
       #  run: |
       #    C:\msys64\mingw32\bin\gcc.exe -v
       #    C:\msys64\mingw64\bin\gcc.exe -v
