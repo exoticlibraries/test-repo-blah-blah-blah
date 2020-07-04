@@ -16,6 +16,7 @@ typedef struct a_struct {
 
 CESTER_BEFORE_ALL(test_instance,
     AStruct* arg_value = (AStruct*) malloc(sizeof(AStruct*));
+		  printf("P1=%p\n", arg_value);
     arg_value->index = 20;
     arg_value->value = "A string";
     test_instance->arg = arg_value;
@@ -23,6 +24,7 @@ CESTER_BEFORE_ALL(test_instance,
 
 CESTER_TEST(modify_test_instance, test_instance,
     AStruct* arg_value = ((AStruct*)test_instance->arg);
+	    printf("P2=%p\n", arg_value);
     cester_assert_equal(arg_value->index, 20);
 	    arg_value->index++;
     cester_assert_equal(arg_value->value, "A string");
