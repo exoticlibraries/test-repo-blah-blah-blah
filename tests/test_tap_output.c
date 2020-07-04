@@ -23,7 +23,8 @@ CESTER_BEFORE_ALL(test_instance,
 
 CESTER_TEST(modify_test_instance, test_instance,
     AStruct* arg_value = ((AStruct*)test_instance->arg);
-    cester_assert_equal(arg_value->index++, 20);
+    cester_assert_equal(arg_value->index, 20);
+	    arg_value->index++;
     cester_assert_equal(arg_value->value, "A string");
     arg_value->value = "Unknown";
 )
@@ -47,7 +48,7 @@ CESTER_SKIP_TEST(skip_this_test_it_breaks, test_instance,
 )
 
 CESTER_OPTIONS(
-    CESTER_OUTPUT_TAP();
+    //CESTER_OUTPUT_TAP();
     CESTER_VERBOSE();
     CESTER_MINIMAL();
     CESTER_NO_ISOLATION();
