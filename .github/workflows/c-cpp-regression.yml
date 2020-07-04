@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest]
-        platform: [x86]
+        platform: [x86, x64]
         compiler: [clang]
 
     steps:
