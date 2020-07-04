@@ -11,8 +11,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest]
-        platform: [x86]
+        os: [macOS 10.15]
+        platform: [x86, x64]
         compiler: [gnu]
 
     steps:
