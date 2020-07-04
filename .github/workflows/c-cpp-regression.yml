@@ -22,9 +22,9 @@ jobs:
       - name: Setup Exotic Libraries
         uses: exoticlibraries/exotic-action@master
         with:
-          run-cester-regression: true
+          run-cester-regression: false
         
-      #- name: Run Regression
-      #  uses: exoticlibraries/exotic-action@master
-      #  with:
-      #    download-exotic-libraries: false
+      - name: Run Regression
+        uses: exoticlibraries/exotic-action@master
+        with:
+          download-exotic-libraries: false
