@@ -11,20 +11,23 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
+        os: [windows-latest]
         platform: [x86, x64]
-        compiler: [gnu, clang]
+        compiler: [clang]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Print Folder
+        run: |
+          dir C:\msys64\
         
-      - name: Setup Exotic Libraries
-        uses: exoticlibraries/exotic-action@master
-        with:
-          run-cester-regression: false
+      #- name: Setup Exotic Libraries
+      #  uses: exoticlibraries/exotic-action@master
+      #  with:
+      #    run-cester-regression: false
         
-      - name: Run Regression
-        uses: exoticlibraries/exotic-action@master
-        with:
-          download-exotic-libraries: false
+      #- name: Run Regression
+      #  uses: exoticlibraries/exotic-action@master
+      #  with:
+      #    download-exotic-libraries: false
