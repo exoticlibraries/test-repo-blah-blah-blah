@@ -8,16 +8,17 @@ CESTER_BODY(
 typedef struct param_arg {
     char *value;
 } Param;    
+    
+    Param* param;
 )
 
 CESTER_BEFORE_ALL(test_instance,
-                  Param* param = (Param*) malloc(sizeof(Param));
+                 param  = (Param*) malloc(sizeof(Param));
                   param->value = (char *) "Hello World";
     test_instance->arg = param;
 )
 
 CESTER_TEST(check_number_equals, test_instance,
-            Param* param = (Param*) test_instance->arg;
     cester_assert_true(cester_string_equals(param->value, "Hello World"));
     cester_assert_not_null(param->value);
     cester_assert_equal(param->value, param->value);
