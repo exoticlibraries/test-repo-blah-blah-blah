@@ -32,3 +32,6 @@ jobs:
           test-folders: |
             test/
             tests/
+          test-exclude-file-pattern-x86: |
+            test_tap_output.c
+            test_shared_data.c
