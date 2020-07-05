@@ -35,3 +35,4 @@ jobs:
           test-exclude-file-pattern: |
             test_tap_output.c
             test_shared_data.c
+            mock+
