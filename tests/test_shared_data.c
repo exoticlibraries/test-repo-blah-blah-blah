@@ -5,7 +5,8 @@
 #include <exotic/cester.h>
 
 CESTER_BEFORE_ALL(test_instance,
-    test_instance->arg = (void*) "Hello World";
+    char *value = "Hello World";
+    test_instance->arg = value;
 )
 
 CESTER_TEST(check_number_equals, test_instance,
