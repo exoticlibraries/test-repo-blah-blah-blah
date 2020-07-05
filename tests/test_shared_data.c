@@ -5,8 +5,7 @@
 #include <exotic/cester.h>
 
 CESTER_BEFORE_ALL(test_instance,
-    char *value = "Hello World";
-    test_instance->arg = value;
+    test_instance->arg = (char *) "Hello World";
 )
 
 CESTER_TEST(check_number_equals, test_instance,
@@ -18,7 +17,7 @@ CESTER_TEST(check_number_equals, test_instance,
 )
 
 CESTER_TEST(validate_shared_arg, test_instance,
-            printf("The Data %s\n", (char*)test_instance->arg);
+            printf("The Data %s\n", test_instance->arg);
             //printf("The Data %p %s %d\n", test_instance->arg, test_instance->arg, cester_string_equals((char*)test_instance->arg, "Hello World"));
             //printf("The Data %p %s %d\n", test_instance->arg, test_instance->arg, cester_string_equals((char*)test_instance->arg, "World"));
             //printf("The Data %p %s %d\n", test_instance->arg, test_instance->arg, cester_string_equals((char*)test_instance->arg, "Hello"));
