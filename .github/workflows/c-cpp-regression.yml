@@ -12,9 +12,9 @@ jobs:
     strategy:
       matrix:
         #os: [macos-latest]
-        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-20.04, ubuntu-latest, windows-latest]
-        platform: [x86, x64]
-        compiler: [gnu, clang]
+        os: [windows-latest]
+        platform: [x86]
+        compiler: [gnu]
 
     steps:
       - name: Checkout
@@ -29,6 +29,6 @@ jobs:
         uses: exoticlibraries/exotic-action@master
         with:
           download-exotic-libraries: false
-          test-folder: |
+          test-folders: |
             test/
             tests/
