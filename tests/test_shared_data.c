@@ -13,7 +13,7 @@ CESTER_TEST(check_number_equals, test_instance,
     cester_assert_not_null(test_instance->arg);
     cester_assert_equal(test_instance->arg, test_instance->arg);
     cester_assert_not_equal(NULL, test_instance->arg);
-            printf("The Data 1 %s\n", test_instance->arg);
+            printf("The Data 1 %s\n", ((char*)(test_instance->arg)));
 )
 
 CESTER_TEST(validate_shared_arg, test_instance,
