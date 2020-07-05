@@ -9,7 +9,7 @@ typedef struct param_arg {
     char *value;
 } Param;    
     
-    Param* param;
+char *value = "Hello World";
 )
 
 CESTER_BEFORE_ALL(test_instance,
@@ -19,11 +19,11 @@ CESTER_BEFORE_ALL(test_instance,
 )
 
 CESTER_TEST(check_number_equals, test_instance,
-    cester_assert_true(cester_string_equals(param->value, "Hello World"));
-    cester_assert_not_null(param->value);
-    cester_assert_equal(param->value, param->value);
-    cester_assert_not_equal(NULL, param->value);
-            printf("The Data 1 %s\n", param->value);
+    cester_assert_true(cester_string_equals(value, "Hello World"));
+    cester_assert_not_null(value);
+    cester_assert_equal(value, value);
+    cester_assert_not_equal(NULL, value);
+            printf("The Data 1 %s\n", value);
 )
 
 CESTER_TEST(validate_shared_arg, test_instance,
