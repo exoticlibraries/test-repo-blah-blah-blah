@@ -13,7 +13,7 @@ jobs:
       matrix:
         os: [macos-latest]
         #os: [windows-latest]
-        platform: [x86]
+        platform: [x86, x64]
         compiler: [gnu]
 
     steps:
