@@ -13,9 +13,7 @@ char *value = "Hello World";
 )
 
 CESTER_BEFORE_ALL(test_instance,
-                 param  = (Param*) malloc(sizeof(Param));
-                  param->value = (char *) "Hello World";
-    test_instance->arg = param;
+                 
 )
 
 CESTER_TEST(check_number_equals, test_instance,
