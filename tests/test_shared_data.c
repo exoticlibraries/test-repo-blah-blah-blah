@@ -22,7 +22,7 @@ CESTER_TEST(check_number_equals, test_instance,
     cester_assert_not_null(param->value);
     cester_assert_equal(param->value, param->value);
     cester_assert_not_equal(NULL, param->value);
-            printf("The Data 1 %s\n", ((char*)(param->value)));
+            printf("The Data 1 %s\n", param->value);
 )
 
 CESTER_TEST(validate_shared_arg, test_instance,
