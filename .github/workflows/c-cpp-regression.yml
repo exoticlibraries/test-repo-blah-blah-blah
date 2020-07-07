@@ -33,6 +33,10 @@ jobs:
             test/
             tests/
           test-exclude-file-pattern: |
-            test_tap_output.c
             test_shared_data.c
             mock+
+          test-exclude-file-pattern-x86: |
+            kdjksjksjd
+          test-exclude-file-pattern-x64: |
+            kdjksjksjd
+        
