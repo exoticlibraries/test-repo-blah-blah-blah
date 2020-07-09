@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Setup Exotic Libraries
-        uses: exoticlibraries/exotic-action@master
+        uses: exoticlibraries/exotic-action@f7ed766650e9dd315d44c98e4499ae931bf2e882
         with:
           run-regression: false
         
