@@ -32,7 +32,9 @@ jobs:
           run-regression: true
           test-folder-recursive: true
           test-folders: |
+            test/
             test_2/
+            tests/
           test-file-pattern: |
             nocester+
             test_+
