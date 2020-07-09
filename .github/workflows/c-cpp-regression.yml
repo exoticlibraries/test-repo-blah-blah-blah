@@ -31,8 +31,5 @@ jobs:
           download-exotic-libraries: false
           run-regression: true
           test-folders: |
-            test/
-            tests/
-          test-exclude-file-pattern: |
-            mock+
+            test_2/
         
