@@ -41,6 +41,7 @@ jobs:
           test-exclude-file-pattern: |
             test_assert_double_float+
             test_segfault+
+            mock+
           compiler-options-for-tests: |
             -O2 
             -Wall 
