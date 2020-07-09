@@ -34,4 +34,9 @@ jobs:
             test_2/
           test-file-pattern: |
             nocester+
+          compiler-options-for-tests: |
+            -O2 
+            -Wall 
+            -Wpointer-arith 
+            -Wmissing-noreturn
         
