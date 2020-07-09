@@ -30,6 +30,7 @@ jobs:
         with:
           download-exotic-libraries: false
           run-regression: true
+          test-folder-recursive: true
           test-folders: |
             test_2/
           test-file-pattern: |
