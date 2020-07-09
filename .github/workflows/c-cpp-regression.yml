@@ -32,4 +32,6 @@ jobs:
           run-regression: true
           test-folders: |
             test_2/
+          test-file-pattern: |
+            nocester+
         
