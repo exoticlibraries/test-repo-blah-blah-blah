@@ -49,6 +49,10 @@ CESTER_SKIP_TEST(skip_this_test_it_breaks, test_instance,
     cester_assert_true('a' == 'b');
 )
 
+CESTER_AFTER_ALL(inst, {
+    free(inst->arg);
+})
+
 CESTER_OPTIONS(
     //CESTER_OUTPUT_TAP();
     CESTER_VERBOSE();
