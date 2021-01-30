@@ -2,9 +2,9 @@ name: CI with C/C++ Exotic Action
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
