@@ -14,7 +14,7 @@ jobs:
         os: [ubuntu-latest]
         #os: [windows-latest]
         platform: [x64]
-        compiler: [gnu]
+        compiler: [gnu, tcc]
 
     steps:
       - name: Checkout
