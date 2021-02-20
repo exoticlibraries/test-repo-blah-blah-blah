@@ -46,6 +46,8 @@ jobs:
             test_assert_double_float+
             test_segfault+
             mock+
+          test-exclude-file-pattern-tcc: |
+            test_tap_output+
           compiler-options-for-tests: |
             -O2 
             -Wall 
