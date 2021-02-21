@@ -13,7 +13,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         platform: [x86, x64]
-        compiler: [cl]
+        compiler: [msvc]
 
     steps:
       - name: Checkout
