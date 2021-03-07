@@ -50,6 +50,9 @@ jobs:
           test-exclude-file-pattern-tcc: |
             test_tap_output+
             nocester+
+          test-exclude-file-pattern-msvc: |
+            test_tap_output+
+            nocester+
           compiler-options-for-tests: |
             -O2 
             -Wall 
