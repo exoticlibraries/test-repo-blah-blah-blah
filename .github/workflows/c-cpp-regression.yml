@@ -15,7 +15,7 @@ jobs:
         os: [windows-latest]
         platform: [x86, x64]
         #compiler: [gcc, clang, tcc, msvc]
-        compiler: [clang]
+        compiler: [gcc]
 
     steps:
       - name: Checkout
