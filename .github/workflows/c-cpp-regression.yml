@@ -47,6 +47,15 @@ jobs:
             test_assert_double_float+
             test_segfault+
             mock+
+          test-exclude-file-pattern-gnu: |
+            test_tap_output+
+            nocester+
+          test-exclude-file-pattern-gcc: |
+            test_tap_output+
+            nocester+
+          test-exclude-file-pattern-clang: |
+            test_tap_output+
+            nocester+
           test-exclude-file-pattern-tcc: |
             test_tap_output+
             nocester+
